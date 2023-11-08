@@ -17,6 +17,7 @@ const config: Config = {
         "main-black": "var(--main-black)",
         "main-darker": "var(--main-darker)",
         "main-black-": "var(--main-black-)",
+        "main-blue": "var(--main-blue)",
       },
     },
   },

@@ -6,6 +6,7 @@
 :root,
 #root,
 #docs-root {
+  --main-blue: #007bff;
   --main-white: #fff;
   --main-gray: #f8f9fa;
   --main-gray-iighter: #e9ecef;
