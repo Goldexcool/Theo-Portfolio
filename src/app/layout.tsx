@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import './globals.css'
-import Navbar from '@/components/Navbar'
+import Hero from '@/components/Hero'
+import About from '@/components/About'
 
 
 export const metadata: Metadata = {
@@ -20,8 +21,9 @@ export default function RootLayout({
         href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
       />
       <body >
-        <Navbar/>
+        <Hero />
         {children}
+        <About />
         </body>
     </html>
   )
