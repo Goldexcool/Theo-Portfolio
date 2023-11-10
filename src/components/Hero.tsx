@@ -1,71 +1,12 @@
 "use client"
 import React, { useState, useEffect, useRef } from 'react';
-import fomix from '../../public/images/logo.png'
+// import fomix from '../../public/images/logo.png'
 import Image from 'next/image'
+import logo from '../../public/Theo_thermal_logo-removebg-preview.png'
 
 const Hero = () => {
   const [isOpen, setIsOpen] = useState(false);
   const themeButton = useRef();
-
-//   const ref = useRef();
-
-
-//   const isLocalStorageAvailable =
-//   typeof window !== "undefined" && window.localStorage;
-// const [selectedTheme, setSelectedTheme] = useState(
-//   isLocalStorageAvailable
-//     ? localStorage.getItem("selected-theme") || "light"
-//     : null
-// );
-// const [selectedIcon, setSelectedIcon] = useState(
-//   isLocalStorageAvailable
-//     ? localStorage.getItem("selected-icon") || "bx-sun"
-//     : null
-// );
-
-// const darkTheme = "dark-theme";
-// const iconTheme = "bx-sun"; // Without specific icon class
-
-// const getCurrentTheme = () => (selectedTheme === "dark" ? "dark" : "light");
-// const getCurrentIcon = () =>
-//   selectedIcon === "bx bx-moon" ? "bx bx-moon" : "bx bx-sun";
-
-// const handleButtonClick = () => {
-//   setSelectedTheme((currentTheme) =>
-//     currentTheme === "dark" ? "light" : "dark"
-//   );
-//   setSelectedIcon((currentIcon) =>
-//     currentIcon === "bx bx-moon" ? "bx bx-sun" : "bx bx-moon"
-//   );
-// };
-
-// useEffect(() => {
-//   if (typeof window !== "undefined") {
-//     // Check the user's system preference for dark mode
-//     if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-//       setSelectedTheme("dark");
-//     } else {
-//       setSelectedTheme("light");
-//     }
-//   }
-// }, []);
-
-// useEffect(() => {
-//   if (typeof window !== "undefined") {
-//     // Apply the selected theme and icon to the body and themeButton
-//     document.body.classList[selectedTheme === "dark" ? "add" : "remove"](
-//       darkTheme
-//     );
-//     themeButton.current.classList[
-//       selectedIcon === "bx bx-moon" ? "add" : "remove"
-//     ](iconTheme);
-
-//     // Store the selected theme and icon in local storage
-//     localStorage.setItem("selected-theme", getCurrentTheme());
-//     localStorage.setItem("selected-icon", getCurrentIcon());
-//   }
-// }, [selectedTheme, selectedIcon, darkTheme, iconTheme]);
-
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -75,11 +16,11 @@ const Hero = () => {
     setIsOpen(false);
   };
   return (
-    <main className='relative bg-hero-pattern'>
-      
-      <header className='flex items-center justify-center max-w-full position-fixed '>
-        <nav className='flex items-center w-full justify-between px-[0rem]  md:[6rem] mt-3'>
-          <Image src={fomix} alt="logo" width={100} height={100} />
+    <main className='relative bg-hero-pattern px-4'>
+      <header className='flex items-center justify-center max-w-full position-fixed  '>
+        <nav className='flex items-center w-full justify-between px-[0rem]  md:[6em]'>
+          <h1 className='text-[25px] text-white'>THEO UNITED</h1>
+          {/* <Image src={logo} alt="logo" width={100} height={10}  /> */}
           <div className="flex items-center justify-center gap-4 text-main-gray-light text-[20px] hidden md:inline-flex"  >
             <a href="/">Home</a>
             <a href="/create">About Us</a>
@@ -118,7 +59,7 @@ const Hero = () => {
       <section className='w-full flex justify-center h-[100vh]'>
         <div className='flex items-center flex-col justify-center h-screen gap-3 px-[0rem] md:px-[6rem]'>
           <p className='md:text-[30px] text-white text-center text-[20px]' >
-            <span className='text-[35px]'>Thoe United</span><br /> with over 12 years of expertise, offers tailored thermal insulation solutions that exceed industry standards, ensuring excellence in every project.
+            <span className='text-[25px]  md:text-[45px]'>Thoe United</span><br /> with over 12 years of expertise, offers tailored thermal insulation solutions that exceed industry standards, ensuring excellence in every project.
           </p>
           <button className='px-[20px] py-[10px] md:text-[20px] text-[17px] bg-main-blue text-white rounded-[10px]'>Contact Us</button>
         </div>
