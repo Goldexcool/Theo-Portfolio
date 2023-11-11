@@ -6,7 +6,7 @@
 :root,
 #root,
 #docs-root {
-  --main-blue: #4361ee;
+  --main-blue: #0317fc;
   --main-white: #fff;
   --main-gray: #f8f9fa;
   --main-gray-lighter: #e9ecef;
@@ -30,16 +30,16 @@ body{
 
 body.dark-theme{
   --main-blue: #007bff;
-  --main-white: #000; /* White is changed to black in dark mode */
-  --main-gray: #121212; /* Darker gray for dark background */
-  --main-gray-lighter: #1f1f1f; /* Slightly lighter gray for dark background */
-  --main-gray-light: #343a40; /* Dark gray for dark background */
-  --main-gray-light--: #495057; /* Slightly lighter gray for dark background */
-  --main-black-: #dee2e6; /* Lighter gray for dark background */
-  --main-darker: #adb5bd; /* Slightly lighter gray for dark background */
-  --main-black: #fff; /* Black is changed to white in dark mode */
-  --background-color: #000; /* Dark background color */
-  --text-color: #fff; /* Light text color for dark background */
+  --main-white: #000; 
+  --main-gray: #10002b; 
+  --main-gray-lighter: #1f1f1f; 
+  --main-gray-light: #343a40;
+  --main-gray-light--: #495057; 
+  --main-black-: #dee2e6; 
+  --main-darker: #adb5bd; 
+  --main-black: #fff; 
+  --background-color: #000; 
+  --text-color: #fff;
 }
 ::-webkit-scrollbar {
   width: 0.6rem;
@@ -57,7 +57,7 @@ html{
 }
 
 .bg-hero-pattern {
-    padding: 0 5rem;
+    padding: 0 .5rem;
     justify-content: center;
     max-width: 100%;
     z-index: 999;
@@ -70,11 +70,20 @@ html{
 /* overflow: hidden; */
     object-fit: cover;
     position: relative;
-  /* Additional CSS properties for background styling (e.g., background-size, background-position, etc.) can be added here if needed. */
+  /* Additional CSS properties for background styling (*e.g., background-size, background-position, etc.) can be added here if needed. */
 }
-@media (max-width: 640px) {
-  .bg-hero-pattern {
 
-    padding: 0 1rem;
-  }
-  }
+.header {
+  width: 100%;
+  transition: background-color 0.3s ease; /* Smooth transition for background color change */
+}
+
+.header.scrolled {
+  position: fixed;
+  background-color: #007bff;
+  z-index: 1000; 
+  top: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
