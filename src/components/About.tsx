@@ -1,4 +1,5 @@
-import React from "react";
+'use client';
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import about from "../../public/WhatsApp Image 2023-10-31 at 23.46.34 (1).jpeg";
 import about2 from "../../public/WhatsApp Image 2023-10-31 at 23.54.05.jpeg";
@@ -9,6 +10,27 @@ import bulb from "../../public/bx-bulb.svg";
 import about3 from "../../public/WhatsApp Image 2023-10-31 at 23.46.34.jpeg"
 
 const About = () => {
+  const [showScrollToTop, setShowScrollToTop] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScrollToTop(window.scrollY > 350);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
+
   return (
     <main>
       <section className="flex items-center justify-center px-5 md:px-20 mt-[5rem]">

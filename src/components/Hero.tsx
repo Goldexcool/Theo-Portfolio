@@ -5,8 +5,94 @@ import Image from "next/image";
 import logo from "../../public/Theo_thermal_logo-removebg-preview.png";
 import image from "../../public/images/habeeb.svg";
 const Hero = () => {
+ 
   const [isOpen, setIsOpen] = useState(false);
-  const themeButton = useRef();
+  const themeButton = useRef(null);
+
+  const headerRef = useRef(null);
+  const [scrolled, setScrolled] = useState(false);
+
+  // Function to handle the scroll event
+  const handleScroll = () => {
+    // Get the current scroll position
+    const scrollPosition = window.scrollY;
+
+    // Update the state based on the scroll position
+    setScrolled(scrollPosition >= 50);
+  };
+
+  // Attach the handleScroll function to the scroll event using useEffect
+  // useEffect(() => {
+  //   window.addEventListener('scroll', handleScroll);
+
+  //   // Clean up the event listener on component unmount
+  //   return () => {
+  //     window.removeEventListener('scroll', handleScroll);
+  //   };
+  // }, []);
+
+
+
+  // const isLocalStorageAvailable =
+  //   typeof window !== "undefined" && window.localStorage;
+  // const [selectedTheme, setSelectedTheme] = useState(
+  //   isLocalStorageAvailable
+  //     ? localStorage.getItem("selected-theme") || "light"
+  //     : null
+  // );
+  // const [selectedIcon, setSelectedIcon] = useState(
+  //   isLocalStorageAvailable
+  //     ? localStorage.getItem("selected-icon") || "bx-sun"
+  //     : null
+  // );
+
+  const darkTheme = "dark-theme";
+  const iconTheme = "bx-sun"; // Without specific icon class
+
+  // const getCurrentTheme = () => (selectedTheme === "dark" ? "dark" : "light");
+  // const getCurrentIcon = () =>
+  //   selectedIcon === "bx bx-moon" ? "bx bx-moon" : "bx bx-sun";
+
+  // const handleButtonClick = () => {
+  //   setSelectedTheme((currentTheme) =>
+  //     currentTheme === "dark" ? "light" : "dark"
+  //   );
+  //   setSelectedIcon((currentIcon) =>
+  //     currentIcon === "bx bx-moon" ? "bx bx-sun" : "bx bx-moon"
+  //   );
+  // };
+
+  // useEffect(() => {
+  //   if (typeof window !== "undefined") {
+  //     // Check the user's system preference for dark mode
+  //     if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+  //       setSelectedTheme("dark");
+  //     } else {
+  //       setSelectedTheme("light");
+  //     }
+  //   }
+  // }, []);
+
+  // useEffect(() => {
+  //   if (typeof window !== "undefined") {
+  //     // Apply the selected theme and icon to the body and themeButton
+  //     document.body.classList[selectedTheme === "dark" ? "add" : "remove"](
+  //       darkTheme
+  //     );
+  //     if (themeButton?.current) {
+  //       // Store the selected theme and icon in local storage
+  //       localStorage.setItem("selected-theme", getCurrentTheme());
+  //       localStorage.setItem("selected-icon", getCurrentIcon());
+  //     }
+      
+
+  //     // Store the selected theme and icon in local storage
+  //     localStorage.setItem("selected-theme", getCurrentTheme());
+  //     localStorage.setItem("selected-icon", getCurrentIcon());
+  //   }
+  // }, [selectedTheme, selectedIcon, darkTheme, iconTheme]);
+
+
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -15,6 +101,9 @@ const Hero = () => {
   const handleItemClick = () => {
     setIsOpen(false);
   };
+
+
+
   return (
     <main className="relative bg-hero-pattern px-4">
       <header className="flex items-center justify-center max-w-full position-fixed  ">
