@@ -5,8 +5,9 @@ import Image from 'next/image'
 import logo from '../../public/Theo_thermal_logo-removebg-preview.png'
 
 const Hero = () => {
+ 
   const [isOpen, setIsOpen] = useState(false);
-  const themeButton = useRef();
+  const themeButton = useRef(null);
 
   const headerRef = useRef(null);
   const [scrolled, setScrolled] = useState(false);
@@ -29,6 +30,7 @@ const Hero = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
 
 
   const isLocalStorageAvailable =
@@ -77,15 +79,19 @@ const Hero = () => {
       document.body.classList[selectedTheme === "dark" ? "add" : "remove"](
         darkTheme
       );
-      themeButton.current.classList[
-        selectedIcon === "bx bx-moon" ? "add" : "remove"
-      ](iconTheme);
+      if (themeButton?.current) {
+        // Store the selected theme and icon in local storage
+        localStorage.setItem("selected-theme", getCurrentTheme());
+        localStorage.setItem("selected-icon", getCurrentIcon());
+      }
+      
 
       // Store the selected theme and icon in local storage
       localStorage.setItem("selected-theme", getCurrentTheme());
       localStorage.setItem("selected-icon", getCurrentIcon());
     }
   }, [selectedTheme, selectedIcon, darkTheme, iconTheme]);
+
 
 
   const toggleMenu = () => {
@@ -95,6 +101,9 @@ const Hero = () => {
   const handleItemClick = () => {
     setIsOpen(false);
   };
+
+
+
   return (
     <main className='relative bg-hero-pattern px-4'>
       <header
