@@ -90,7 +90,7 @@ const Hero = () => {
     }
   }, []);
 
-  
+
 
   useEffect(() => {
     if (typeof window !== "undefined" && themeButton.current) {
@@ -122,7 +122,7 @@ const Hero = () => {
           } fixed top-0 left-0 right-0 z-50 transition-all ease-in-out px-10 duration-300 p-3`}
       >
         <nav className='flex items-center w-full justify-between px-[0rem]  '>
-          <h1 className="text-4xl font-bold">
+          <h1 className="md:text-4xl font-bold text-[25px]">
             <span className="bg-gradient-to-r from-blue-500 to-orange-500 text-transparent bg-clip-text">
               THEO UNITED
             </span>
@@ -150,12 +150,10 @@ const Hero = () => {
             <h1 className="text--main-black">08070583707</h1>
           </div> */}
           <div className="flex justify-center items-center gap-3">
-            <i className={scrolled ? "bx bx-moon text-black text-[20px] cursor-pointer" :  "bx bx-moon text-white text-[20px] cursor-pointer"} ref={themeButton} onClick={handleButtonClick}></i>
+            <i className={scrolled ? "bx bx-moon text-black text-[20px] cursor-pointer" : "bx bx-moon text-white text-[20px] cursor-pointer"} ref={themeButton} onClick={handleButtonClick}></i>
             <div className="lg:hidden">
-              <i
-                className="bx bx-grid-alt text-[20px] cursor-pointer blc lg:hidden text-icon- "
-                onClick={toggleMenu}
-              ></i>
+              <i className={scrolled ? "bx bx-grid-alt text-black text-[20px] cursor-pointer" : "bx bx-grid-alt text-white text-[20px] cursor-pointer"} onClick={toggleMenu}></i>
+
             </div>
           </div>
         </nav>

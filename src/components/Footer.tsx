@@ -17,7 +17,7 @@ const Footer = () => {
     "Privacy Policy",
   ];
   return (
-    <div className="footer px-5 md:px-20 mt-16 py-16 flex sm:justify-start sm:items-start items-center flex-wrap gap-8 ">
+    <div className="footer px-5 md:px-20 mt-16 py-16 flex sm:justify-start max-[500px]:flex-col sm:items-start items-center flex-wrap gap-8 ">
       <div className="flex flex-col gap-4 lg:w-2/4">
         <div>
           <h1 className="uppercase text-main-blue  sm:text-left text-center text-[2.5rem]">
