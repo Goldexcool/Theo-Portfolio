@@ -33,18 +33,18 @@ const About = () => {
 
   return (
     <main>
-      <section className="flex items-center justify-center px-5 md:px-20 mt-[5rem]">
+      <section className="flex items-center justify-center px-5 md:px-20 mt-[5rem]" id="about">
         <div>
           <div className="flex justify-center items-center flex-col gap-3 mb-4 sm:mb-[3rem] ">
-            <h2 className="md:text-[50px] text-[30px]">
+            <h2 className="md:text-[50px] text-[30px] text-main-black">
               About <span className="text-main-blue">Us</span>
             </h2>
             <hr className="w-[60px] h-[3px] bg-main-blue mb-4" />
-            <h3 className="text-[15px] text-center sm:mb-5 md:text-[20px]">
+            <h3 className="text-[15px] text-center sm:mb-5 md:text-[20px] text-main-black">
               Our Team: The Architects of Insulation Innovation
             </h3>
           </div>
-          <article className=" gap-4 md:gap-[0rem] md:flex-row md:justify-between w-full  flex-col flex ">
+          <article className=" gap-4 md:gap-[0rem] md:flex-row md:justify-between w-full  flex-col flex text-main-black">
             <div className="flex items-center flex-col md:w-1/2 w-full gap-3 ">
               <h1 className="md:text-[24px] font-[500] mb-3 text-[17px] md:text-start text-center">
                 Crafting Excellence in Thermal Insulation: Our Story, Your
@@ -98,13 +98,13 @@ const About = () => {
       <section className="flex items-center justify-center md:px-20 mt-[5rem] px-5">
         <div className="">
           <div className="flex justify-center items-center flex-col gap-3 mb-[3rem] text-center">
-            <h2 className="md:text-[50px] text-[30px]">
+            <h2 className="md:text-[50px] text-[30px] text-main-black">
               Why Choose <span className="text-main-blue"> THEO UNITED</span>
             </h2>
             <hr className="w-[60px] h-[3px] bg-main-blue mb-4" />
           </div>
 
-          <article className=" flex md:justify-between md:w-full md:flex-row flex-col-reverse gap-4 md:gap-[0px] ">
+          <article className=" flex md:justify-between md:w-full md:flex-row flex-col-reverse gap-4 md:gap-[0px] text-main-black">
             <div className="md:block flex justify-center items-center">
               <Image
                 src={about3}
@@ -116,7 +116,8 @@ const About = () => {
             </div>
             <div className="flex flex-col md:w-1/2 gap-8">
               <div className="flex gap-3">
-                <Image src={bulb} alt="" height={60} width={60} />
+                <i className="bx bx-bulb text-main-black text-[40px] md:[50px]"></i>
+                {/* <Image src={bulb} alt="" height={60} width={60} /> */}
                 <div className="flex flex-col gap-2">
                   <span className="text-[19px]">Innovation</span>
                   <h1 className="text-[15px]">
@@ -128,7 +129,8 @@ const About = () => {
               </div>
 
               <div className="flex gap-3 ">
-                <Image src={checkdouble} alt="" height={60} width={60} />
+              <i className="bx bx-check-double text-main-black text-[40px] md:[50px]"></i>
+                {/* <Image src={checkdouble} alt="" height={60} width={60} /> */}
                 <div className="flex flex-col gap-2">
                   <span className="text-[20px]">Quality Assurance</span>
                   <h1 className="text-[15px]">
@@ -140,7 +142,8 @@ const About = () => {
               </div>
 
               <div className="flex gap-3 ">
-                <Image src={groups} alt="" height={60} width={60} />
+              <i className="bx bx-group text-main-black text-[40px] md:[50px]"></i>
+                {/* <Image src={groups} alt="" height={60} width={60} /> */}
                 <div className="flex flex-col gap-2">
                   <span className="text-[19px]">Collaborative Spirit</span>
                   <h1 className="text-[15px]">
@@ -153,7 +156,8 @@ const About = () => {
               </div>
 
               <div className="flex gap-3  ">
-                <Image src={rocket} alt="" height={70} width={70} />
+              <i className="bx bx-rocket text-main-black text-[40px] md:[50px]"></i>
+                {/* <Image src={rocket} alt="" height={70} width={70} /> */}
                 <div className="flex flex-col gap-2">
                   <span className="text-[19px]">Experience</span>
                   <h1 className="text-[15px]">
@@ -169,6 +173,15 @@ const About = () => {
           </article>
         </div>
       </section>
+
+      {showScrollToTop && (
+        <div
+          className="fixed bottom-6 right-6 cursor-pointer bg-main-blue p-2 rounded-[10px]"
+          onClick={scrollToTop}
+        >
+          <i className="bx bx-chevron-up text-white text-3xl"></i>
+        </div>
+      )}
     </main>
   );
 };

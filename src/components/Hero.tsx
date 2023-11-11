@@ -4,96 +4,25 @@ import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import logo from "../../public/Theo_thermal_logo-removebg-preview.png";
 import image from "../../public/images/habeeb.svg";
+import Preloader from "./Preloader";
 const Hero = () => {
- 
-  const [isOpen, setIsOpen] = useState(false);
   const themeButton = useRef(null);
 
   const headerRef = useRef(null);
   const [scrolled, setScrolled] = useState(false);
-
-  // Function to handle the scroll event
-  const handleScroll = () => {
-    // Get the current scroll position
-    const scrollPosition = window.scrollY;
-
-    // Update the state based on the scroll position
-    setScrolled(scrollPosition >= 50);
-  };
-
-  // Attach the handleScroll function to the scroll event using useEffect
-  // useEffect(() => {
-  //   window.addEventListener('scroll', handleScroll);
-
-  //   // Clean up the event listener on component unmount
-  //   return () => {
-  //     window.removeEventListener('scroll', handleScroll);
-  //   };
-  // }, []);
+  const [currentPage, setCurrentPage] = useState("home");
+  const [isOpen, setIsOpen] = useState(false);
+  const [loading, setLoading] = useState(true); // Loading state for the preloader
 
 
+  useEffect(() => {
+    // Simulating a delay to demonstrate the preloader
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2000);
 
-  // const isLocalStorageAvailable =
-  //   typeof window !== "undefined" && window.localStorage;
-  // const [selectedTheme, setSelectedTheme] = useState(
-  //   isLocalStorageAvailable
-  //     ? localStorage.getItem("selected-theme") || "light"
-  //     : null
-  // );
-  // const [selectedIcon, setSelectedIcon] = useState(
-  //   isLocalStorageAvailable
-  //     ? localStorage.getItem("selected-icon") || "bx-sun"
-  //     : null
-  // );
-
-  const darkTheme = "dark-theme";
-  const iconTheme = "bx-sun"; // Without specific icon class
-
-  // const getCurrentTheme = () => (selectedTheme === "dark" ? "dark" : "light");
-  // const getCurrentIcon = () =>
-  //   selectedIcon === "bx bx-moon" ? "bx bx-moon" : "bx bx-sun";
-
-  // const handleButtonClick = () => {
-  //   setSelectedTheme((currentTheme) =>
-  //     currentTheme === "dark" ? "light" : "dark"
-  //   );
-  //   setSelectedIcon((currentIcon) =>
-  //     currentIcon === "bx bx-moon" ? "bx bx-sun" : "bx bx-moon"
-  //   );
-  // };
-
-  // useEffect(() => {
-  //   if (typeof window !== "undefined") {
-  //     // Check the user's system preference for dark mode
-  //     if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-  //       setSelectedTheme("dark");
-  //     } else {
-  //       setSelectedTheme("light");
-  //     }
-  //   }
-  // }, []);
-
-  // useEffect(() => {
-  //   if (typeof window !== "undefined") {
-  //     // Apply the selected theme and icon to the body and themeButton
-  //     document.body.classList[selectedTheme === "dark" ? "add" : "remove"](
-  //       darkTheme
-  //     );
-  //     if (themeButton?.current) {
-  //       // Store the selected theme and icon in local storage
-  //       localStorage.setItem("selected-theme", getCurrentTheme());
-  //       localStorage.setItem("selected-icon", getCurrentIcon());
-  //     }
-      
-
-  //     // Store the selected theme and icon in local storage
-  //     localStorage.setItem("selected-theme", getCurrentTheme());
-  //     localStorage.setItem("selected-icon", getCurrentIcon());
-  //   }
-  // }, [selectedTheme, selectedIcon, darkTheme, iconTheme]);
-
-
-
+    return () => clearTimeout(timer);
+  }, []);
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
@@ -101,40 +30,138 @@ const Hero = () => {
   const handleItemClick = () => {
     setIsOpen(false);
   };
+  useEffect(() => {
+    const handleScroll = () => {
+      // Update the scrolled state based on the scroll position
+      setScrolled(window.scrollY > 50);
+    };
+
+    // Add scroll event listener
+    window.addEventListener("scroll", handleScroll);
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const isLocalStorageAvailable =
+    typeof window !== "undefined" && window.localStorage;
+  const [selectedTheme, setSelectedTheme] = useState(
+    isLocalStorageAvailable
+      ? localStorage.getItem("selected-theme") || "light"
+      : null
+  );
+  const [selectedIcon, setSelectedIcon] = useState(
+    isLocalStorageAvailable
+      ? localStorage.getItem("selected-icon") || "bx-sun"
+      : null
+  );
+
+  const darkTheme = "dark-theme";
+  const iconTheme = "bx-sun"; // Without a specific icon class
+
+  const getCurrentTheme = () => (selectedTheme === "dark" ? "dark" : "light");
+  const getCurrentIcon = () =>
+    selectedIcon === "bx bx-sun" ? "bx bx-sun" : "bx bx-moon";
+
+  const handleButtonClick = () => {
+    setSelectedTheme((currentTheme) =>
+      currentTheme === "dark" ? "light" : "dark"
+    );
+    setSelectedIcon((currentIcon) =>
+      currentIcon === "bx bx-moon" ? "bx bx-sun" : "bx bx-moon"
+    );
+  };
+
+  useEffect(() => {
+    // Check the user's system preference for dark mode
+    if (typeof window !== "undefined") {
+      if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        setSelectedTheme("dark");
+      } else {
+        setSelectedTheme("light");
+      }
+
+      // Disable the preloader once the page is loaded
+      window.addEventListener("load", () => {
+        setLoading(false);
+      });
+    }
+  }, []);
+
+  
+
+  useEffect(() => {
+    if (typeof window !== "undefined" && themeButton.current) {
+      // Apply the selected theme and icon to the body and themeButton
+      document.body.classList[selectedTheme === "dark" ? "add" : "remove"](
+        darkTheme
+      );
+      (themeButton.current as HTMLElement)?.classList?.[
+        selectedIcon === "bx bx-moon" ? "add" : "remove"
+      ](iconTheme);
+      // Store the selected theme and icon in local storage
+      localStorage.setItem("selected-theme", getCurrentTheme());
+      localStorage.setItem("selected-icon", getCurrentIcon());
+    }
+  }, [selectedTheme, selectedIcon, darkTheme, iconTheme, themeButton]);
+
+  // Return the preloader component while loading is true
+  if (loading) {
+    return <Preloader />;
+  }
+
 
 
 
   return (
-    <main className="relative bg-hero-pattern px-4">
-      <header className="flex items-center justify-center max-w-full position-fixed  ">
-        <nav className="flex items-center w-full justify-between px-[0rem]  md:[6em]">
-          <h1 className="text-[25px] text-white">THEO UNITED</h1>
+    <main className='relative bg-hero-pattern px-4'>
+      <header
+        className={`${scrolled ? "bg-white shadow-md" : ""
+          } fixed top-0 left-0 right-0 z-50 transition-all ease-in-out px-10 duration-300 p-3`}
+      >
+        <nav className='flex items-center w-full justify-between px-[0rem]  '>
+          <h1 className="text-4xl font-bold">
+            <span className="bg-gradient-to-r from-blue-500 to-orange-500 text-transparent bg-clip-text">
+              THEO UNITED
+            </span>
+          </h1>
           {/* <Image src={logo} alt="logo" width={100} height={10}  /> */}
-          <div className="flex items-center justify-center gap-4 text-main-gray-light text-[20px] hidden lg:inline-flex">
-            <a href="/">Home</a>
-            <a href="/create">About Us</a>
-            <a href="/create">Services</a>
-            <a href="/create">Gallery</a>
-            <a href="/create">Contact Us</a>
+          <div className="flex items-center justify-center gap-4 text-[20px] hidden lg:inline-flex">
+            <a href="#" className={scrolled ? 'text-black' : 'text-white'}>
+              Home
+            </a>
+            <a href="#about" className={scrolled ? 'text-black' : 'text-white'}>
+              About Us
+            </a>
+            <a href="#services" className={scrolled ? 'text-black' : 'text-white'}>
+              Services
+            </a>
+            <a href="#gallery" className={scrolled ? 'text-black' : 'text-white'}>
+              Gallery
+            </a>
+            <a href="#contact" className={scrolled ? 'text-black' : 'text-white'}>
+              Contact Us
+            </a>
           </div>
-          <div className="flex items-center justify-center gap-2 cursor-pointer text-[17px]  lg:inline-flex text-main-gray-light ">
+          {/* <div className="flex items-center justify-center gap-2 cursor-pointer text-[17px] h lg:inline-flex text-main-gray-light ">
             <i className="bx bx-phone text-main-gray-light  text-[20px]"></i>
             <h1 className="text--main-black">08070583707</h1>
-          </div>
+          </div> */}
           <div className="flex justify-center items-center gap-3">
-            <i className="bx bx-moon text-main-gray-light  text-[20px] cursor-pointer "></i>
+            <i className={scrolled ? "bx bx-moon text-black text-[20px] cursor-pointer" :  "bx bx-moon text-white text-[20px] cursor-pointer"} ref={themeButton} onClick={handleButtonClick}></i>
             <div className="lg:hidden">
               <i
-                className="bx bx-grid-alt text-[20px] cursor-pointer blc lg:hidden text-main-gray-light "
+                className="bx bx-grid-alt text-[20px] cursor-pointer blc lg:hidden text-icon- "
                 onClick={toggleMenu}
               ></i>
             </div>
           </div>
         </nav>
         <div
-          className={`hamburger-menu fixed top-0 right-0 h-full w-full bg-white transform transition-transform ease-in-out duration-300 justify-center ${
-            isOpen ? "translate-x-0" : "translate-x-full"
-          }`}
+          className={`hamburger-menu fixed top-0 right-0 h-full w-full bg-white transform transition-transform ease-in-out duration-300 justify-center ${isOpen ? "translate-x-0" : "translate-x-full"
+            }`}
         >
           <div
             className="close-button p-4 cursor-pointer absolute top-0 right-0"

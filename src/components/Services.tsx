@@ -46,10 +46,10 @@ const Services = () => {
     },
   ];
   return (
-    <div className="px-5 md:px-20 mt-[5rem]">
+    <div className="px-5 md:px-20 mt-[5rem] " id="services">
       <div className=" flex items-center  justify-center gap-2">
         <hr className="w-[70px] h-[3px] flex mt-4  justify-center items-center bg-main-blue mb-4" />
-        <h1 className=" text-[0.75rem] sm:text-[1rem] before:bg-main-blue before:content-[''] before:py-2  ">
+        <h1 className=" text-[0.75rem] sm:text-[1rem] before:bg-main-blue before:content-[''] before:py-2  text-main-black">
           SERVICES
         </h1>
         <hr className="w-[70px] h-[3px] flex mt-4  justify-center items-center bg-main-blue mb-4" />
@@ -77,7 +77,7 @@ const Services = () => {
               <h1 className="text-center text-[1.2rem] md:text-[1.5rem]  text-main-black">
                 {serve.header}
               </h1>
-              <p className="text-center text-main-gray-light-- text-[0.75rem] md:text-[1rem]">
+              <p className="text-center text-main-black text-[0.75rem] md:text-[1rem]">
                 {serve.about}
               </p>
             </div>

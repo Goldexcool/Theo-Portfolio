@@ -12,10 +12,10 @@ import GalleryImage10 from "../../public/WhatsApp Image 2023-10-31 at 23.26.28 (
 import Image from "next/image";
 const Gallery = () => {
   return (
-    <div className="px-5 md:px-20 mt-[5rem]">
+    <div className="px-5 md:px-20 mt-[5rem] " id="gallery">
       <div className=" flex items-center justify-center   gap-2">
         <hr className="w-[70px] h-[3px] flex mt-4  justify-center items-center bg-main-blue mb-4" />
-        <h1 className=" text-[0.75rem] sm:text-[1rem] before:bg-main-blue before:content-[''] before:py-2  ">
+        <h1 className=" text-[0.75rem] sm:text-[1rem] before:bg-main-blue before:content-[''] before:py-2  text-main-black">
           GALLERY
         </h1>
         <hr className="w-[70px] h-[3px] flex mt-4  justify-center items-center bg-main-blue mb-4" />
