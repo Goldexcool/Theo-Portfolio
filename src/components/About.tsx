@@ -39,13 +39,13 @@ const About = () => {
           <div className='flex justify-center items-center flex-col gap-3 mb-4 sm:mb-[3rem] '>
           <div className='flex justify-center items-center gap-3 mb-[1rem] text-center'>
             <hr className='w-[100px] h-[3px] bg-main-blue '/>
-            <h2 className='md:text-[50px] text-[30px] text-main-black'>About <span className='text-main-blue'> Us</span></h2>
+            <h2 className='lg:text-[50px] text-[40px] text-main-black'>About <span className='text-main-blue'> Us</span></h2>
             <hr className='w-[100px] h-[3px] bg-main-blue ' />
           </div>
             <h3 className='text-[15px] text-center sm:mb-5 md:text-[20px] text-main-black'>Our Team: The Architects of Insulation Innovation</h3>
           </div>
-          <article className=' gap-4 md:gap-[0rem]  md:flex-row flex-wrap md:justify-between w-full  flex-col flex text-main-black'>
-            <div className='flex items-center flex-col md:w-1/2 w-full gap-3 '>
+          <article className=' gap-4 lg:gap-[0rem] justify-center items-center lg:flex-row flex-wrap lg:justify-between lg:w-full w-full flex-col flex text-main-black  md:gap-[0px]'>
+            <div className='flex items-center flex-col lg:w-1/2 w-full gap-3 mb-3'>
               <h1 className='md:text-[24px] font-[500] mb-3 text-[17px] lg:text-start text-center'>Crafting Excellence in Thermal Insulation: Our Story, Your Solution</h1>
               <h2 className='md:text-[19px] text-[15px] md:text-left text-center'> At <span className='text-main-blue text-[17px] '>THEO UNITED</span> we are committed to providing exceptional thermal insulation services. Our team brings together over 12 years of individual experience, each member having worked at management levels in various establishments. </h2>
               <h3 className='mt-3 mb-4 md:text-[19px] text-[15px] md:text-left text-center'>Our collective expertise is now united under a single corporate body to ensure our prospective clients&apos; satisfaction with our services.</h3>
@@ -73,7 +73,7 @@ const About = () => {
         <div className=''>
           <div className='flex justify-center items-center  gap-[2px] md:gap-3 mb-[3rem] text-center' >
             <hr className='w-[100px] h-[3px] bg-main-blue '/>
-            <h2 className='md:text-[50px] text-[30px] text-main-black'>Why Choose <span className='text-main-blue'> THEO UNITED</span></h2>
+            <h2 className='lg:text-[50px] text-[30px] text-main-black'>Why Choose <span className='text-main-blue'> THEO UNITED</span></h2>
             <hr className='w-[100px] h-[3px] bg-main-blue ' />
           </div>
 
@@ -83,7 +83,7 @@ const About = () => {
             </div>
             <div className='flex flex-col lg:w-1/2 gap-8'>
               <div className='flex gap-3'>
-                <i className='bx bx-bulb text-main-black md:text-[50px] text-[30px]'></i>
+                <i className='bx bx-bulb text-main-black lg:text-[50px] text-[30px]'></i>
                 <div className='flex flex-col gap-2'>
                   <span className='text-[19px]'>Innovation</span>
                   <h1 className='text-[15px]'> Our continuous pursuit of innovation ensures that you receive the latest and most efficient insulation solutions.</h1>
@@ -91,7 +91,7 @@ const About = () => {
               </div>
 
               <div className='flex gap-3 '>
-                <i className='bx bx-check-double text-main-black md:text-[50px] text-[30px]'></i>
+                <i className='bx bx-check-double text-main-black lg:text-[50px] text-[30px]'></i>
                 <div className='flex flex-col gap-2'>
                   <span className='text-[20px]'>Quality Assurance</span>
                   <h1 className='text-[15px]'> Our commitment to quality is unwavering. Every project we undertake is executed with precision and attention to detail, guaranteeing exceptional results.</h1>
@@ -99,7 +99,7 @@ const About = () => {
               </div>
 
               <div className='flex gap-3 '>
-                <i className='bx bx-group text-main-black md:text-[50px] text-[30px]'></i>
+                <i className='bx bx-group text-main-black lg:text-[50px] text-[30px]'></i>
                 <div className='flex flex-col gap-2'>
                   <span className='text-[19px]'>Collaborative Spirit</span>
                   <h1 className='text-[15px]'> Our collaborative spirit ensures that we work closely with you to understand your needs and deliver customized solutions that meet your unique requirements.</h1>
@@ -107,7 +107,7 @@ const About = () => {
               </div>
 
               <div className='flex gap-3  '>
-                <i className='bx bx-rocket text-main-black md:text-[50px] text-[30px]'></i>
+                <i className='bx bx-rocket text-main-black lg:text-[50px] text-[30px]'></i>
                 <div className='flex flex-col gap-2'>
                   <span className='text-[19px]'>Experience</span>
                   <h1 className='text-[15px]'> With over 12 years of experience, our team has honed their skills to perfection. We bring an extensive background in thermal insulation and an understanding of the industry that sets us apart.</h1>
