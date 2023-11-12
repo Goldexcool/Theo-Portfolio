@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 "use client";
 import React, { useState, useEffect, useRef } from "react";
 // import fomix from '../../public/images/logo.png'
@@ -105,7 +106,7 @@ const Hero = () => {
       localStorage.setItem("selected-theme", getCurrentTheme());
       localStorage.setItem("selected-icon", getCurrentIcon());
     }
-  }, [selectedTheme, selectedIcon, darkTheme, iconTheme, themeButton]);
+  }, [selectedTheme, selectedIcon, darkTheme, iconTheme, themeButton, getCurrentTheme, getCurrentIcon]);
 
   // Return the preloader component while loading is true
   if (loading) {
