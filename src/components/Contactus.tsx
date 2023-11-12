@@ -1,16 +1,37 @@
-'use client'
+"use client";
 import React from "react";
 // grid grid-cols-2 lg:grid-cols-3
 const Contactus = () => {
   return (
-    <div className="px-5 md:px-20 " id="contact">
-      <div className=" flex items-center justify-center  mt-12  gap-2">
+    <div className="px-5 md:px-20  mt-12 " id="contact">
+      <div className=" flex items-center justify-center   gap-2">
         <hr className="w-[70px] h-[3px] flex mt-4  justify-center items-center bg-main-blue mb-4" />
         <h1 className=" md:text-[50px] text-center text-[30px] before:bg-main-blue before:content-[''] before:py-2 text-main-black ">
           CONTACT US
         </h1>
         <hr className="w-[70px] h-[3px] flex mt-4  justify-center items-center bg-main-blue mb-4" />
       </div>
+      <div className="map mt-8">
+        <h5 className="text-center text-main-darker text-lg">
+          find our location here{" "}
+        </h5>
+        <div className="mapouter flex justify-center items-center mx-auto w-full">
+          <div className="gmap_canvas W-[800px] max-w-full sm:block hidden">
+            <iframe
+              className=""
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63420.51088437022!2d3.1657706996575006!3d6.549194842845496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b85422f38ae75%3A0x214e1e7d2b0ee983!2sIkotun%20102213%2C%20Lagos!5e0!3m2!1sen!2sng!4v1699824147845!5m2!1sen!2sng"
+              // allowFullScreen=""
+              width={650}
+              height={650}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+            {/* <a href="https://fmovies-online.net"></a> */}
+            <br />
+          </div>
+        </div>
+      </div>
+
       <div
         className="
     flex flex-col lg:flex-row flex-wrap
@@ -18,7 +39,7 @@ const Contactus = () => {
       >
         <div className="flex flex-col gap-6 col-span-1  lg:w-[40%] text-main-black ">
           <div className="flex items-center gap-4 ">
-            <i className="bx bx-phone-call text-[2rem] bg-main-blue p-2 rounded-[50%] text-main-black"></i>
+            <i className="bx bx-phone-call text-[2rem] bg-main-blue p-2 rounded-[50%] text-white"></i>
             <div className="text-main-black">
               <p className="text-main-black text-[2rem] "> Call:</p>
               <div className="text-main-black flex gap-2 ">
@@ -34,8 +55,8 @@ const Contactus = () => {
               <p className="text-main-black text-[2rem] ">Email:</p>
               <div>
                 {" "}
-                <p className="text-main-black flex gap-2 w-[100px] md:w-none">
-                  theounitedthermalinsulation<br/>@gmail.com
+                <p className="text-main-black flex gap-2 ">
+                  theounitedthermalinsulation @gmail.com
                 </p>
               </div>
             </div>
@@ -46,7 +67,7 @@ const Contactus = () => {
               <p className="text-main-black text-[2rem] ">Location:</p>
               <div>
                 {" "}
-                <p className="text-main-black flex gap-2 flex-wrap w-[200px] md:w-none ">
+                <p className="text-main-black flex gap-2 flex-wrap ">
                   Branch office -4b, Comfort Ugbeoke Close, off Babatunde
                   Street, Golf Estate Road, Lakowe Ibeju- Lekki <br />
                   Head office - 20, Foursquare Street, off Ijegun Road, Alagbada
@@ -59,7 +80,7 @@ const Contactus = () => {
         <div className="col-span-1  lg:col-span-2 lg:w-2/4">
           <form action="" className="">
             <div className="flex gap-2 flex-col">
-              <div className="flex flex-col md:flex-row w-5/6 gap-4">
+              <div className="flex flex-col md:flex-row  gap-4">
                 <div className="w-full">
                   <label htmlFor="" className="mb-2 text-main-black">
                     First Name
@@ -79,7 +100,7 @@ const Contactus = () => {
                   />
                 </div>
               </div>
-              <div className="w-5/6 "> 
+              <div className=" ">
                 <label htmlFor="" className="mb-2 text-main-black">
                   Your Email
                 </label>
@@ -88,7 +109,7 @@ const Contactus = () => {
                   className="border border-main-gray-light-- w-full py-1 px-3 rounded-md  outline-none"
                 />
               </div>
-              <div className="w-5/6 ">
+              <div className="">
                 <label htmlFor="" className="mb-2 text-main-black">
                   Message
                 </label>

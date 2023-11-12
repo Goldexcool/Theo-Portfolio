@@ -3,7 +3,7 @@ import "./globals.css";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Services from "@/components/Services";
-import Gallery from "@/components/Gallery";
+import Gallery from "@/components/gallery";
 import Contactus from "@/components/Contactus";
 import Footer from "@/components/Footer";
 
