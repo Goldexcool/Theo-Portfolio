@@ -15,7 +15,6 @@ const Hero = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [loading, setLoading] = useState(true); // Loading state for the preloader
 
-
   useEffect(() => {
     // Simulating a delay to demonstrate the preloader
     const timer = setTimeout(() => {
@@ -91,8 +90,6 @@ const Hero = () => {
     }
   }, []);
 
-
-
   useEffect(() => {
     if (typeof window !== "undefined" && themeButton.current) {
       // Apply the selected theme and icon to the body and themeButton
@@ -106,43 +103,58 @@ const Hero = () => {
       localStorage.setItem("selected-theme", getCurrentTheme());
       localStorage.setItem("selected-icon", getCurrentIcon());
     }
-  }, [selectedTheme, selectedIcon, darkTheme, iconTheme, themeButton, getCurrentTheme, getCurrentIcon]);
+  }, [
+    selectedTheme,
+    selectedIcon,
+    darkTheme,
+    iconTheme,
+    themeButton,
+    getCurrentTheme,
+    getCurrentIcon,
+  ]);
 
   // Return the preloader component while loading is true
   if (loading) {
     return <Preloader />;
   }
 
-
-
-
   return (
-    <main className='relative bg-hero-pattern px-4'>
+    <main className="relative bg-hero-pattern px-4">
       <header
-        className={`${scrolled ? "bg-white shadow-md" : ""
-          } fixed top-0 left-0 right-0 z-50 transition-all ease-in-out px-10 duration-300 p-3`}
+        className={`${
+          scrolled ? "bg-white shadow-md" : ""
+        } fixed top-0 left-0 right-0 z-50 transition-all ease-in-out px-10 duration-300 p-3`}
       >
-        <nav className='flex items-center w-full justify-between px-[0rem]  '>
+        <nav className="flex items-center w-full justify-between px-[0rem]  ">
           <h1 className="md:text-4xl font-bold text-[25px]">
             <span className="bg-gradient-to-r from-blue-500 to-orange-500 text-transparent bg-clip-text">
               THEO UNITED
             </span>
           </h1>
           {/* <Image src={logo} alt="logo" width={100} height={10}  /> */}
-          <div className="flex items-center justify-center gap-4 text-[20px] hidden lg:inline-flex">
-            <a href="#" className={scrolled ? 'text-black' : 'text-white'}>
+          <div className=" items-center justify-center gap-4 text-[20px] hidden lg:inline-flex">
+            <a href="#" className={scrolled ? "text-black" : "text-white"}>
               Home
             </a>
-            <a href="#about" className={scrolled ? 'text-black' : 'text-white'}>
+            <a href="#about" className={scrolled ? "text-black" : "text-white"}>
               About Us
             </a>
-            <a href="#services" className={scrolled ? 'text-black' : 'text-white'}>
+            <a
+              href="#services"
+              className={scrolled ? "text-black" : "text-white"}
+            >
               Services
             </a>
-            <a href="#gallery" className={scrolled ? 'text-black' : 'text-white'}>
+            <a
+              href="#gallery"
+              className={scrolled ? "text-black" : "text-white"}
+            >
               Gallery
             </a>
-            <a href="#contact" className={scrolled ? 'text-black' : 'text-white'}>
+            <a
+              href="#contact"
+              className={scrolled ? "text-black" : "text-white"}
+            >
               Contact Us
             </a>
           </div>
@@ -151,16 +163,31 @@ const Hero = () => {
             <h1 className="text--main-black">08070583707</h1>
           </div> */}
           <div className="flex justify-center items-center gap-3">
-            <i className={scrolled ? "bx bx-moon text-black text-[20px] cursor-pointer" : "bx bx-moon text-white text-[20px] cursor-pointer"} ref={themeButton} onClick={handleButtonClick}></i>
+            <i
+              className={
+                scrolled
+                  ? "bx bx-moon text-black text-[20px] cursor-pointer"
+                  : "bx bx-moon text-white text-[20px] cursor-pointer"
+              }
+              ref={themeButton}
+              onClick={handleButtonClick}
+            ></i>
             <div className="lg:hidden">
-              <i className={scrolled ? "bx bx-grid-alt text-black text-[20px] cursor-pointer" : "bx bx-grid-alt text-white text-[20px] cursor-pointer"} onClick={toggleMenu}></i>
-
+              <i
+                className={
+                  scrolled
+                    ? "bx bx-grid-alt text-black text-[20px] cursor-pointer"
+                    : "bx bx-grid-alt text-white text-[20px] cursor-pointer"
+                }
+                onClick={toggleMenu}
+              ></i>
             </div>
           </div>
         </nav>
         <div
-          className={`hamburger-menu fixed top-0 right-0 h-full w-full bg-white transform transition-transform ease-in-out duration-300 justify-center ${isOpen ? "translate-x-0" : "translate-x-full"
-            }`}
+          className={`hamburger-menu fixed top-0 right-0 h-full w-full bg-white transform transition-transform ease-in-out duration-300 justify-center ${
+            isOpen ? "translate-x-0" : "translate-x-full"
+          }`}
         >
           <div
             className="close-button p-4 cursor-pointer absolute top-0 right-0"
