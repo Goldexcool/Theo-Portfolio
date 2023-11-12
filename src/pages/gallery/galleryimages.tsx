@@ -2,7 +2,7 @@ import React from "react";
 const index = () => {
   return (
     <div>
-        <h1 className="text-[30px]">hh</h1>
+        <h1 className="text-[660px]">coming...</h1>
     </div>
   );
 };
