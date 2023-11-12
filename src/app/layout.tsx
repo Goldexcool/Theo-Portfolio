@@ -7,6 +7,7 @@ import Services from "@/components/Services";
 import Contactus from "@/components/Contactus";
 import Footer from "@/components/Footer";
 import Gallery from "@/components/gallery";
+// import Gallery from "@/components/Gallery";
 
 
 export const metadata: Metadata = {
