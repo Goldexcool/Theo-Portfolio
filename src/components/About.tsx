@@ -8,6 +8,7 @@ import rocket from "../../public/bx-rocket.svg";
 import groups from "../../public/bx-group.svg";
 import bulb from "../../public/bx-bulb.svg";
 import about3 from "../../public/WhatsApp Image 2023-10-31 at 23.46.34.jpeg"
+import team from '../Data/team'
 
 const About = () => {
   const [showScrollToTop, setShowScrollToTop] = useState(false);
@@ -173,6 +174,27 @@ const About = () => {
           </article>
         </div>
       </section>
+
+
+      <section className="flex items-start justify-center max-w-full px-5">
+        <div className="flex items-center gap-3 flex-wrap">
+          {
+            team.map((member, i) => (
+              <div key={i} className="flex flex-col items-center gap-3 mt-10 border border-indigo-600 w-[300px] ">
+                <div>
+                  <Image src={member.image01} alt=""  height={300}/>
+                </div> 
+                <div className="flex flex-col gap-3 p-3">
+                  <h1 className="text-[20px]">{member.name}</h1>
+                  <h2 className="text-[15px]">{member.position}</h2>
+                </div>              
+              </div>
+            ))
+          }
+        </div>
+      </section>
+
+
 
       {showScrollToTop && (
         <div
