@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 "use client";
 import React, { useState, useEffect, useRef } from "react";
 // import fomix from '../../public/images/logo.png'
@@ -60,6 +61,7 @@ const Navbar = () => {
   const darkTheme = "dark-theme";
   const iconTheme = "bx-sun"; // Without a specific icon class
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const getCurrentTheme = () => (selectedTheme === "dark" ? "dark" : "light");
   const getCurrentIcon = () =>
     selectedIcon === "bx bx-sun" ? "bx bx-sun" : "bx bx-moon";
@@ -102,7 +104,7 @@ const Navbar = () => {
       localStorage.setItem("selected-theme", getCurrentTheme());
       localStorage.setItem("selected-icon", getCurrentIcon());
     }
-  }, [selectedTheme, selectedIcon, darkTheme, iconTheme, themeButton]);
+  }, [selectedTheme, selectedIcon, darkTheme, iconTheme, themeButton, getCurrentTheme, getCurrentIcon]);
 
   // Return the preloader component while loading is true
   if (loading) {
@@ -123,7 +125,7 @@ const Navbar = () => {
             </span>
           </h1>
           {/* <Image src={logo} alt="logo" width={100} height={10}  /> */}
-          <div className="flex items-center justify-center gap-4 text-[20px] hidden lg:inline-flex">
+          <div className=" items-center justify-center gap-4 text-[20px] hidden lg:inline-flex">
             <a href="#" className={scrolled ? "text-black" : "text-white"}>
               Home
             </a>
