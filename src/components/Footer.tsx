@@ -32,7 +32,7 @@ const Footer = () => {
             Street, off Ijegun Road, Alagbada Bust-stop, Ikotun Lagos
           </p>
         </div>
-        <div className="flex gap-4 items-center sm:justify-start sm:items-start  justify-center">
+        <div className="flex gap-4 items-center sm:justify-start sm:items-center  justify-center">
           <div className=" text-[1rem] text-main-blue flex flex-col">
             Phone:
           </div>

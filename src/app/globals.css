@@ -30,18 +30,17 @@ body {
 
 body.dark-theme {
   --main-blue: #007bff;
-  --main-white: #000; 
-  --main-gray: #10002b; 
-  --main-gray-lighter: #1f1f1f; 
+  --main-white: #000;
+  --main-gray: #10002b;
+  --main-gray-lighter: #1f1f1f;
   --main-gray-light: #343a40;
-  --main-gray-light--: #495057; 
-  --main-black-: #dee2e6; 
-  --main-darker: #adb5bd; 
-  --main-black: #fff; 
-  --background-color: #000; 
+  --main-gray-light--: #495057;
+  --main-black-: #dee2e6;
+  --main-darker: #adb5bd;
+  --main-black: #fff;
+  --background-color: #000;
   --text-color: #fff;
   --icon-: #fff;
-
 }
 ::-webkit-scrollbar {
   width: 0.6rem;
@@ -153,7 +152,6 @@ html {
     grid-template-areas:
       "first second third "
       "fourth fifth sixth";
-      
   }
 }
 @media (max-width: 600px) {
@@ -169,7 +167,6 @@ html {
   }
 }
 
-
 .header {
   width: 100%;
   transition: background-color 0.3s ease; /* Smooth transition for background color change */
@@ -178,17 +175,31 @@ html {
 .header.scrolled {
   position: fixed;
   background-color: #007bff;
-  z-index: 1000; 
+  z-index: 1000;
   top: 0;
   left: 0;
   right: 0;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
-.bg-nav-home{
+.bg-nav-home {
   color: #30475e;
 }
 
-.bg-nav{
+.bg-nav {
   color: #fff;
+}
+
+.mapouter {
+  position: relative;
+  text-align: right;
+  height: 500px;
+  width: 499px;
+}
+
+.gmap_canvas {
+  overflow: hidden;
+  background: none !important;
+  height: 500px;
+  width: 499px;
 }

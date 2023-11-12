@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import GalleryImage from "../../public/WhatsApp Image 2023-10-31 at 23.46.34 (3).jpeg";
 import GalleryImage1 from "../../public/WhatsApp Image 2023-10-31 at 23.54.05 (2).jpeg";
@@ -10,7 +11,15 @@ import GalleryImage8 from "../../public/WhatsApp Image 2023-10-31 at 23.46.28 (1
 import GalleryImage9 from "../../public/WhatsApp Image 2023-10-31 at 23.26.25 (2).jpeg";
 import GalleryImage10 from "../../public/WhatsApp Image 2023-10-31 at 23.26.28 (2).jpeg";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
+import router from "next/router";
+import Link from "next/link";
+
 const Gallery = () => {
+  const router = useRouter();
+  const GalleryAuth = () => {
+    router.push("/gallery");
+  };
   return (
     <div className="px-5 md:px-20 mt-[5rem] " id="gallery">
       <div className=" flex items-center justify-center   gap-2">
@@ -50,7 +59,7 @@ const Gallery = () => {
           />
         </div>
         <div className="gallery3">
-        <div className="overlay">Theo United</div>
+          <div className="overlay">Theo United</div>
           <Image
             className="w-full h-full rounded-lg"
             src={GalleryImage10}
@@ -60,7 +69,7 @@ const Gallery = () => {
           />
         </div>
         <div className="gallery4">
-        <div className="overlay">Theo United</div>
+          <div className="overlay">Theo United</div>
           <Image
             className="w-full h-full rounded-lg"
             src={GalleryImage4}
@@ -70,7 +79,7 @@ const Gallery = () => {
           />
         </div>
         <div className="gallery5">
-        <div className="overlay">Theo United</div>
+          <div className="overlay">Theo United</div>
           <Image
             className="w-full h-full rounded-lg"
             src={GalleryImage5}
@@ -80,7 +89,7 @@ const Gallery = () => {
           />
         </div>
         <div className="gallery6">
-        <div className="overlay">Theo United</div>
+          <div className="overlay">Theo United</div>
           <Image
             className="w-full h-full rounded-lg"
             src={GalleryImage6}
@@ -89,6 +98,17 @@ const Gallery = () => {
             height="200"
           />
         </div>
+      </div>
+
+      <div className="flex justify-center items-center">
+        <Link href="/gallery/galleryimages">
+          <button
+            className="border border-main-blue hover:text-white  bg-white w-fit py-4 px-6 mt-8 rounded-[0.5rem] hover:bg-main-blue hover:border-white transition-all"
+            onClick={GalleryAuth}
+          >
+            See More
+          </button>
+        </Link>
       </div>
     </div>
   );

@@ -3,9 +3,11 @@ import "./globals.css";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Services from "@/components/Services";
-import Gallery from "@/components/Gallery";
 import Contactus from "@/components/Contactus";
+import Gallery from "@/components/Gallery";
 import Footer from "@/components/Footer";
+
+// import Gallery from "@/components/Gallery";
 
 export const metadata: Metadata = {
   title: "Create Next App",
