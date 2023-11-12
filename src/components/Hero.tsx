@@ -202,7 +202,7 @@ const Hero = () => {
       <section className="w-full flex justify-center h-[100vh]">
         <div className="flex items-center flex-col justify-center h-screen gap-3 px-[0rem] md:px-[6rem]">
           <p className="md:text-[30px] text-white text-center text-[20px]">
-            <span className="text-[25px]  md:text-[45px]">Thoe United</span>
+            <span className="text-[25px]  md:text-[45px]">Theo United</span>
             <br /> with over 12 years of expertise, offers tailored thermal
             insulation solutions that exceed industry standards, ensuring
             excellence in every project.

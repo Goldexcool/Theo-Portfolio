@@ -42,7 +42,7 @@ const About = () => {
             </h2>
             <hr className="w-[60px] h-[3px] bg-main-blue mb-4" />
             <h3 className="text-[15px] text-center sm:mb-5 md:text-[20px] text-main-black">
-              Our Team: The Architects of Insulation Innovation
+              Our Team: The architect of Industrial Insulation, Engineering services
             </h3>
           </div>
           <article className=" gap-4 md:gap-[0rem] md:flex-row md:justify-between w-full  flex-col flex text-main-black">
@@ -57,10 +57,7 @@ const About = () => {
                 <span className="text-main-blue text-[17px] ">
                   THEO UNITED
                 </span>{" "}
-                we are committed to providing exceptional thermal insulation
-                services. Our team brings together over 12 years of individual
-                experience, each member having worked at management levels in
-                various establishments.{" "}
+                Theo united we are committed to providing exceptional Engineering services, industrial Insulation, heating and Air conditioning Engineer
               </h2>
               <h3 className="mt-3 mb-4 md:text-[19px] text-[15px] md:text-left text-center">
                 Our collective expertise is now united under a single corporate
@@ -130,7 +127,7 @@ const About = () => {
               </div>
 
               <div className="flex gap-3 ">
-              <i className="bx bx-check-double text-main-black text-[40px] md:[50px]"></i>
+                <i className="bx bx-check-double text-main-black text-[40px] md:[50px]"></i>
                 {/* <Image src={checkdouble} alt="" height={60} width={60} /> */}
                 <div className="flex flex-col gap-2">
                   <span className="text-[20px]">Quality Assurance</span>
@@ -143,7 +140,7 @@ const About = () => {
               </div>
 
               <div className="flex gap-3 ">
-              <i className="bx bx-group text-main-black text-[40px] md:[50px]"></i>
+                <i className="bx bx-group text-main-black text-[40px] md:[50px]"></i>
                 {/* <Image src={groups} alt="" height={60} width={60} /> */}
                 <div className="flex flex-col gap-2">
                   <span className="text-[19px]">Collaborative Spirit</span>
@@ -157,7 +154,7 @@ const About = () => {
               </div>
 
               <div className="flex gap-3  ">
-              <i className="bx bx-rocket text-main-black text-[40px] md:[50px]"></i>
+                <i className="bx bx-rocket text-main-black text-[40px] md:[50px]"></i>
                 {/* <Image src={rocket} alt="" height={70} width={70} /> */}
                 <div className="flex flex-col gap-2">
                   <span className="text-[19px]">Experience</span>
@@ -175,24 +172,39 @@ const About = () => {
         </div>
       </section>
 
-
-      <section className="flex items-start justify-center max-w-full px-5">
-        <div className="flex items-center gap-3 flex-wrap">
-          {
-            team.map((member, i) => (
-              <div key={i} className="flex flex-col items-center gap-3 mt-10 border border-indigo-600 w-[300px] ">
-                <div>
-                  <Image src={member.image01} alt=""  height={300}/>
-                </div> 
-                <div className="flex flex-col gap-3 p-3">
-                  <h1 className="text-[20px]">{member.name}</h1>
-                  <h2 className="text-[15px]">{member.position}</h2>
-                </div>              
-              </div>
-            ))
-          }
+      <div className="mt-[6rem]">
+        <div className=" flex items-center  justify-center gap-2">
+          <hr className="w-[70px] h-[3px] flex mt-4  justify-center items-center bg-main-blue mb-4" />
+          <h1 className=" text-[0.75rem] sm:text-[1rem] before:bg-main-blue before:content-[''] before:py-2  text-main-black">
+            Team
+          </h1>
+          <hr className="w-[70px] h-[3px] flex mt-4  justify-center items-center bg-main-blue mb-4" />
         </div>
-      </section>
+        <div className="flex justify-center items-center">
+          <h1 className="uppercase text-main-black font-medium sm:text-[2rem] text-[1.5rem]  md:text-[3rem]">
+            check our <span className="text-main-blue">Team</span>
+          </h1>
+        </div>
+        <section className="flex items-start justify-center max-w-full md:px-20 px-5">
+          <div className="flex items-center justify-center">
+            <div className="flex items-center gap-[2rem] flex-wrap justify-center">
+              {
+                team.map((member, i) => (
+                  <div key={i} className="flex flex-col items-center gap-3 mt-10 border border-indigo-600 w-fit hover:shadow-xl hover:shadow-indigo-500/40 justify-center md:w-[300px] rounded-b-lg">
+                    <div>
+                      <Image src={member.image01} alt="" height={300} />
+                    </div>
+                    <div className="flex flex-col gap-3 p-3 justify-center items-center ">
+                      <h1 className="text-[20px] text-main-black">{member.name}</h1>
+                      <h2 className="text-[15px] text-main-black">{member.position}</h2>
+                    </div>
+                  </div>
+                ))
+              }
+            </div>
+          </div>
+        </section>
+      </div>
 
 
 

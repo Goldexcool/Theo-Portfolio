@@ -2,15 +2,15 @@ import segun from '../../public/Untitled design (10).png'
 import tosin from "../../public/Untitled design (11).png"
 import daniel from "../../public/Untitled design (12).png"
 import amos from "../../public/Untitled design (13).png"
-import ndubuisi from "../../public/Untitled design (14).png"
+import ndubuisi from "../../public/Untitled design (9).png"
 import femi from "../../public/Untitled design (8).png"
-import kayode from "../../public/Untitled design (9).png"
+import kayode from "../../public/Untitled design (14).png"
 
 
 const Team = [
     {
         id: 1,
-        position: "Md",
+        position: "Managing director",
         name: "Tiodunmo Abdulraheem",
         image01: segun,
     },

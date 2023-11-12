@@ -2,12 +2,13 @@ import React from "react";
 
 const Footer = () => {
   const servicesfooter = [
-    "Cutting-Edge Insulation Solutions",
-    "Tailored Insulation Designs",
-    "Cost-effective Solutions",
-    "Customer-Centric Approach",
-    "Eco-Friendly Insulation Options",
-    "Insulation Upgrades and Retrofits",
+    "Insulation",
+    "Scaffolding ",
+    "Painting and blasting ",
+    "Electrical installation and maintenance",
+    "Technical manpower/ labour supply",
+    "Civil engineering",
+    "Procurement and Supply",
   ];
   const usefulLinks = [
     "Home",
