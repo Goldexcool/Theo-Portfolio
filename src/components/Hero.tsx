@@ -129,7 +129,7 @@ const Hero = () => {
             </span>
           </h1>
           {/* <Image src={logo} alt="logo" width={100} height={10}  /> */}
-          <div className="flex items-center justify-center gap-4 text-[20px] hidden lg:inline-flex">
+          <div className=" items-center justify-center gap-4 text-[20px] hidden lg:inline-flex">
             <a href="#" className={scrolled ? 'text-black' : 'text-white'}>
               Home
             </a>
