@@ -15,14 +15,29 @@ const Contactus = () => {
         <h5 className="text-center text-main-darker text-lg">
           find our location here{" "}
         </h5>
-        <div className="mapouter flex justify-center items-center mx-auto w-full">
-          <div className="gmap_canvas W-[800px] max-w-full sm:block hidden">
+        <div className=" hidden sm:flex justify-center items-center mx-auto w-full">
+          <div className="gmap_canvas w-full">
             <iframe
-              className=""
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63420.51088437022!2d3.1657706996575006!3d6.549194842845496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b85422f38ae75%3A0x214e1e7d2b0ee983!2sIkotun%20102213%2C%20Lagos!5e0!3m2!1sen!2sng!4v1699824147845!5m2!1sen!2sng"
-              // allowFullScreen=""
-              width={650}
-              height={650}
+            className="w-full"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.888801558852!2d3.253420574779832!3d6.535725193457044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b857d2ae26dfd%3A0x3d37b1c506d5c93e!2s20%20Foursquare%20St%2C%20LGA%2C%20off%20Ijegun%20Road%2C%20IKOTUN%20102213%2C%20Lagos!5e0!3m2!1sen!2sng!4v1699884735705!5m2!1sen!2sng"
+              width="1200"
+              height="600"
+              allowFullScreen={false}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+            {/* <a href="https://fmovies-online.net"></a> */}
+            <br />
+          </div>
+        </div>
+        <div className=" sm:hidden flex justify-center items-center mx-auto w-full">
+          <div className="gmap_canvas w-full">
+            <iframe
+            className="w-full"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.888801558852!2d3.253420574779832!3d6.535725193457044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b857d2ae26dfd%3A0x3d37b1c506d5c93e!2s20%20Foursquare%20St%2C%20LGA%2C%20off%20Ijegun%20Road%2C%20IKOTUN%20102213%2C%20Lagos!5e0!3m2!1sen!2sng!4v1699888686707!5m2!1sen!2sng"
+              width="400"
+              height="300"
+              allowFullScreen={false}
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
             ></iframe>

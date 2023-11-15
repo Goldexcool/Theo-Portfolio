@@ -12,14 +12,13 @@ import GalleryImage9 from "../../public/WhatsApp Image 2023-10-31 at 23.26.25 (2
 import GalleryImage10 from "../../public/WhatsApp Image 2023-10-31 at 23.26.28 (2).jpeg";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import router from "next/router";
 import Link from "next/link";
 
 const Gallery = () => {
   const router = useRouter();
-  const GalleryAuth = () => {
-    router.push("/gallery");
-  };
+  // const handleButtonClick = () => {
+  //   router.push("/Gallery");
+  // };
   return (
     <div className="px-5 md:px-20 mt-[5rem] " id="gallery">
       <div className=" flex items-center justify-center   gap-2">
@@ -101,14 +100,12 @@ const Gallery = () => {
       </div>
 
       <div className="flex justify-center items-center">
-        <Link href="/gallery/galleryimages">
-          <button
-            className="border border-main-blue hover:text-white  bg-white w-fit py-4 px-6 mt-8 rounded-[0.5rem] hover:bg-main-blue hover:border-white transition-all"
-            onClick={GalleryAuth}
-          >
-            See More
-          </button>
-        </Link>
+        <button
+          className="border border-main-blue hover:text-white  bg-white w-fit py-4 px-6 mt-8 rounded-[0.5rem] hover:bg-main-blue hover:border-white transition-all"
+          onClick={() => router.push("/Gallery")}
+        >
+          See More
+        </button>
       </div>
     </div>
   );
