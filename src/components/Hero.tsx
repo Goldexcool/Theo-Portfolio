@@ -3,12 +3,12 @@
 import React, { useState, useEffect, useRef } from "react";
 // import fomix from '../../public/images/logo.png'
 import Image from "next/image";
-import logo from "../../public/Theo_thermal_logo-removebg-preview.png";
+// import logo from "../../public/Theo_thermal_logo-removebg-preview.png";
 import image from "../../public/images/habeeb.svg";
 import Preloader from "./Preloader";
+// import logo from '../../public/Untitled design (6).svg'
 const Hero = () => {
   const themeButton = useRef(null);
-
   const headerRef = useRef(null);
   const [scrolled, setScrolled] = useState(false);
   const [currentPage, setCurrentPage] = useState("home");
@@ -120,13 +120,11 @@ const Hero = () => {
     <main className='relative bg-hero-pattern px-4'>
       <header
         className={`${scrolled ? "bg-white shadow-md" : ""
-          } fixed top-0 left-0 right-0 z-50 transition-all ease-in-out px-10 duration-300 p-3`}
+          } fixed top-0 left-0 right-0 z-50 transition-all ease-in-out px-10 duration-300 `}
       >
         <nav className='flex items-center w-full justify-between px-[0rem]  '>
           <h1 className="md:text-4xl font-bold text-[25px]">
-            <span className="bg-gradient-to-r from-blue-500 to-orange-500 text-transparent bg-clip-text">
-              THEO UNITED
-            </span>
+            {/* <Image src={logo} alt="" className="w-[200px] h-[100px]"/> */}
           </h1>
           {/* <Image src={logo} alt="logo" width={100} height={10}  /> */}
           <div className=" items-center justify-center gap-4 text-[20px] hidden lg:inline-flex">

@@ -11,14 +11,10 @@ import GalleryImage8 from "../../public/WhatsApp Image 2023-10-31 at 23.46.28 (1
 import GalleryImage9 from "../../public/WhatsApp Image 2023-10-31 at 23.26.25 (2).jpeg";
 import GalleryImage10 from "../../public/WhatsApp Image 2023-10-31 at 23.26.28 (2).jpeg";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
-import Link from "next/link";
+import Link from 'next/link'
 
 const Gallery = () => {
-  const router = useRouter();
-  // const handleButtonClick = () => {
-  //   router.push("/Gallery");
-  // };
+
   return (
     <div className="px-5 md:px-20 mt-[5rem] " id="gallery">
       <div className=" flex items-center justify-center   gap-2">
@@ -99,14 +95,15 @@ const Gallery = () => {
         </div>
       </div>
 
-      <div className="flex justify-center items-center">
-        <button
-          className="border border-main-blue hover:text-white  bg-white w-fit py-4 px-6 mt-8 rounded-[0.5rem] hover:bg-main-blue hover:border-white transition-all"
-          onClick={() => router.push("/Gallery")}
-        >
-          See More
-        </button>
-      </div>
+      <Link href={'/gotopage'}>
+        <div className="flex justify-center items-center">
+          <button
+            className="border border-main-blue hover:text-white  bg-white w-fit py-4 px-6 mt-8 rounded-[0.5rem] hover:bg-main-blue hover:border-white transition-all"
+          >
+            See More
+          </button>
+        </div>
+      </Link>
     </div>
   );
 };

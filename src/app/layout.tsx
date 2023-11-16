@@ -1,11 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Hero from "@/components/Hero";
-import About from "@/components/About";
-import Services from "@/components/Services";
-import Contactus from "@/components/Contactus";
-import Gallery from "@/components/Gallery";
-import Footer from "@/components/Footer";
+
 
 // import Gallery from "@/components/Gallery";
 
@@ -26,13 +21,9 @@ export default function RootLayout({
         href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
       />
       <body>
-        <Hero />
+        
         {children}
-        <About />
-        <Services />
-        <Gallery />
-        <Contactus />
-        <Footer />
+  
       </body>
     </html>
   );
