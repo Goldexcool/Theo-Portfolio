@@ -4,7 +4,7 @@ import daniel from "../../public/Untitled design (12).png"
 import amos from "../../public/Untitled design (13).png"
 import ndubuisi from "../../public/Untitled design (9).png"
 import femi from "../../public/Untitled design (8).png"
-import kayode from "../../public/Untitled design (14).png"
+import kayode from "../../public/Kayo.png"
 
 
 const Team = [

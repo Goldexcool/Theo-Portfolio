@@ -6,7 +6,7 @@ import Image from "next/image";
 // import logo from "../../public/Theo_thermal_logo-removebg-preview.png";
 import image from "../../public/images/habeeb.svg";
 import Preloader from "./Preloader";
-// import logo from '../../public/Untitled design (6).svg'
+import logo from '../../public/Untitled design (6).svg'
 const Hero = () => {
   const themeButton = useRef(null);
   const headerRef = useRef(null);
@@ -124,7 +124,7 @@ const Hero = () => {
       >
         <nav className='flex items-center w-full justify-between px-[0rem]  '>
           <h1 className="md:text-4xl font-bold text-[25px]">
-            {/* <Image src={logo} alt="" className="w-[200px] h-[100px]"/> */}
+            <Image src={logo} alt="" className="w-[270px] h-[100px]"/>
           </h1>
           {/* <Image src={logo} alt="logo" width={100} height={10}  /> */}
           <div className=" items-center justify-center gap-4 text-[20px] hidden lg:inline-flex">
