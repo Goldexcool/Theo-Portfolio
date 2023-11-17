@@ -34,7 +34,7 @@ const About = () => {
 
   return (
     <main>
-      <section className="flex items-center justify-center px-5 md:px-20 mt-[5rem]" id="about">
+      <section className="flex  items-center justify-center px-5 md:px-20 mt-[5rem]" id="about">
         <div>
           <div className="flex justify-center items-center flex-col gap-3 mb-4 sm:mb-[3rem] ">
             <h2 className="md:text-[50px] text-[30px] text-main-black">
@@ -45,9 +45,9 @@ const About = () => {
               Our Team: The architect of Industrial Insulation, Engineering services
             </h3>
           </div>
-          <article className=" gap-4 md:gap-[0rem] md:flex-row md:justify-between w-full  flex-col flex text-main-black">
-            <div className="flex items-center flex-col md:w-1/2 w-full gap-3 ">
-              <h1 className="md:text-[24px] font-[500] mb-3 text-[17px] md:text-start text-center">
+          <article className=" gap-4 lg:gap-[0rem] lg:flex-row lg:justify-between w-full  flex-col flex text-main-black">
+            <div className="flex items-center flex-col lg:w-1/2 w-full gap-3 ">
+              <h1 className="md:text-[24px] font-[500] mb-3 text-[17px] lg:text-start text-center">
                 Crafting Excellence in Thermal Insulation: Our Story, Your
                 Solution
               </h1>
@@ -73,7 +73,7 @@ const About = () => {
               </h4>
             </div>
 
-            <div className="md:block flex justify-center items-center">
+            <div className="lg:block flex justify-center items-center">
               <Image
                 src={about}
                 alt=""
@@ -102,8 +102,8 @@ const About = () => {
             <hr className="w-[60px] h-[3px] bg-main-blue mb-4" />
           </div>
 
-          <article className=" flex md:justify-between md:w-full md:flex-row flex-col-reverse gap-4 md:gap-[0px] text-main-black">
-            <div className="md:block flex justify-center items-center">
+          <article className=" flex lg:justify-between md:w-full lg:flex-row flex-col-reverse gap-4 md:gap-[0px] text-main-black">
+            <div className="lg:block flex justify-center items-center">
               <Image
                 src={about3}
                 alt=""
@@ -112,9 +112,9 @@ const About = () => {
                 className="h-[500px] rounded-[30px] mb-4 w-[500px]"
               />
             </div>
-            <div className="flex flex-col md:w-1/2 gap-8">
+            <div className="flex flex-col lg:w-1/2 gap-8">
               <div className="flex gap-3">
-                <i className="bx bx-bulb text-main-black text-[40px] md:[50px]"></i>
+                <i className="bx bx-bulb text-main-black text-[40px] lg:[50px]"></i>
                 {/* <Image src={bulb} alt="" height={60} width={60} /> */}
                 <div className="flex flex-col gap-2">
                   <span className="text-[19px]">Innovation</span>
