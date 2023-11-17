@@ -63,7 +63,7 @@ const Page = () => {
               {
                 <Image
                   src={imagesData[select]}
-                  className="w-[100%] h-full lg:h-[400px] object-cover lg:object-contain"
+                  className="w-[95%] h-full object-cover lg:object-contain"
                   alt="imageclicked"
                   width={200}
                   height={200}

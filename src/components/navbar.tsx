@@ -181,7 +181,7 @@ const Navbar = () => {
           </div>
         </nav>
         <div
-          className={`hamburger-menu fixed top-0 right-0 h-full w-full bg-white transform transition-transform ease-in-out duration-300 justify-center ${
+          className={`hamburger-menu fixed top-0 right-0 h-full w-full z-40 bg-white transform transition-transform ease-in-out duration-300 justify-center ${
             isOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >
