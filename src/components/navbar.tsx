@@ -129,7 +129,7 @@ const Navbar = () => {
           <h1 className="md:text-4xl font-bold text-[25px]">
             <a href="/">
               {" "}
-              <Image src={logo} alt="" className="w-[270px] h-[100px]" />
+              <Image src={logo} alt="" className="w-[200px] h-[130px]" />
             </a>
           </h1>
           {/* <Image src={logo} alt="logo" width={100} height={10}  /> */}
@@ -163,7 +163,7 @@ const Navbar = () => {
               className={
                 // scrolled
                 //   ? "bx bx-moon text-white text-[20px] cursor-pointer"
-                "bx bx-moon text-white text-[20px] cursor-pointer"
+                "bx bx-moon text-main-black text-[20px] cursor-pointer"
               }
               ref={themeButton}
               onClick={handleButtonClick}
@@ -173,7 +173,7 @@ const Navbar = () => {
                 className={
                   // scrolled
                   //   ? "bx bx-grid-alt text-white text-[20px] cursor-pointer"
-                  "bx bx-grid-alt text-white text-[20px] cursor-pointer"
+                  "bx bx-grid-alt text-main-black text-[20px] cursor-pointer"
                 }
                 onClick={toggleMenu}
               ></i>
