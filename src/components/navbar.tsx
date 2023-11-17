@@ -104,7 +104,15 @@ const Navbar = () => {
       localStorage.setItem("selected-theme", getCurrentTheme());
       localStorage.setItem("selected-icon", getCurrentIcon());
     }
-  }, [selectedTheme, selectedIcon, darkTheme, iconTheme, themeButton, getCurrentTheme, getCurrentIcon]);
+  }, [
+    selectedTheme,
+    selectedIcon,
+    darkTheme,
+    iconTheme,
+    themeButton,
+    getCurrentTheme,
+    getCurrentIcon,
+  ]);
 
   // Return the preloader component while loading is true
   if (loading) {
@@ -112,42 +120,40 @@ const Navbar = () => {
   }
 
   return (
-    <div className="bg-hero-pattern">
+    <div className="">
       <header
         className={`${
           scrolled ? "bg-white shadow-md" : ""
-        } fixed top-0 left-0 right-0 z-50 transition-all ease-in-out px-10 duration-300 p-3`}
+        } fixed top-0 left-0 right-0 z-40 transition-all ease-in-out px-10 duration-300 p-3`}
       >
         <nav className="flex items-center w-full justify-between px-[0rem]  ">
           <h1 className="md:text-4xl font-bold text-[25px]">
-            <span className="bg-gradient-to-r from-blue-500 to-orange-500 text-transparent bg-clip-text">
-              THEO UNITED
-            </span>
+            <a href="/">
+              {" "}
+              <Image src={logo} alt="" className="w-[270px] h-[100px]" />
+            </a>
           </h1>
           {/* <Image src={logo} alt="logo" width={100} height={10}  /> */}
-          <div className=" items-center justify-center gap-4 text-[20px] hidden lg:inline-flex">
+          <div className=" items-center  justify-center gap-4 text-[20px] hidden lg:inline-flex">
+            <div className="text-text-color">
+              {" "}
+              <a
+                href="#"
+                className={`${scrolled ? "text-black" : "text-white"} `}
+              >
+                Home
+              </a>
+            </div>
             <a href="#" className={scrolled ? "text-black" : "text-white"}>
-              Home
-            </a>
-            <a href="#about" className={scrolled ? "text-black" : "text-white"}>
               About Us
             </a>
-            <a
-              href="#services"
-              className={scrolled ? "text-black" : "text-white"}
-            >
+            <a href="#" className={scrolled ? "text-black" : "text-white"}>
               Services
             </a>
-            <a
-              href="#gallery"
-              className={scrolled ? "text-black" : "text-white"}
-            >
+            <a href="#" className={scrolled ? "text-black" : "text-white"}>
               Gallery
             </a>
-            <a
-              href="#contact"
-              className={scrolled ? "text-black" : "text-white"}
-            >
+            <a href="#" className={scrolled ? "text-black" : "text-white"}>
               Contact Us
             </a>
           </div>
