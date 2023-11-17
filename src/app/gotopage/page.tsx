@@ -1,7 +1,5 @@
 "use client";
-
 import React, { useState } from "react";
-
 // import { imagePaths } from "../../../src/image-context";
 // console.log(imagePaths);
 import Image from "next/image";
