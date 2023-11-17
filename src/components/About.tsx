@@ -120,8 +120,7 @@ const About = () => {
                   <span className="text-[19px]">Innovation</span>
                   <h1 className="text-[15px]">
                     {" "}
-                    Our continuous pursuit of innovation ensures that you
-                    receive the latest and most efficient insulation solutions.
+                    We have put in place a very good strategy to ensure quality delivery of service.
                   </h1>
                 </div>
               </div>
@@ -146,9 +145,7 @@ const About = () => {
                   <span className="text-[19px]">Collaborative Spirit</span>
                   <h1 className="text-[15px]">
                     {" "}
-                    Our commitment to quality is unwavering. Every project we
-                    undertake is executed with precision and attention to
-                    detail, guaranteeing exceptional results.
+                    Our quality assurance process is top class as we have established set of requirements for a reliable service delivery.
                   </h1>
                 </div>
               </div>
