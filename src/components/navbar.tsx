@@ -10,7 +10,7 @@ const Navbar = () => {
   const themeButton = useRef(null);
 
   const headerRef = useRef(null);
-  const [scrolled, setScrolled] = useState(false);
+  // const [scrolled, setScrolled] = useState(false);
   const [currentPage, setCurrentPage] = useState("home");
   const [isOpen, setIsOpen] = useState(false);
   const [loading, setLoading] = useState(true); // Loading state for the preloader
@@ -33,7 +33,7 @@ const Navbar = () => {
   useEffect(() => {
     const handleScroll = () => {
       // Update the scrolled state based on the scroll position
-      setScrolled(window.scrollY > 50);
+      // setScrolled(window.scrollY > 50);
     };
 
     // Add scroll event listener
@@ -122,9 +122,8 @@ const Navbar = () => {
   return (
     <div className="">
       <header
-        className={`${
-          scrolled ? "bg-white shadow-md" : ""
-        } fixed top-0 left-0 right-0 z-40 transition-all ease-in-out px-10 duration-300 p-3`}
+        className={`"bg-white shadow-md" : ""
+        }  top-0 left-0 right-0 z-30 transition-all ease-in-out px-10 duration-300 p-3`}
       >
         <nav className="flex items-center w-full justify-between px-[0rem]  ">
           <h1 className="md:text-4xl font-bold text-[25px]">
@@ -134,26 +133,24 @@ const Navbar = () => {
             </a>
           </h1>
           {/* <Image src={logo} alt="logo" width={100} height={10}  /> */}
-          <div className=" items-center  justify-center gap-4 text-[20px] hidden lg:inline-flex">
-            <div className="text-text-color">
-              {" "}
-              <a
-                href="#"
-                className={`${scrolled ? "text-black" : "text-white"} `}
-              >
+          <div
+            className={`items-center justify-center gap-4 text-[20px] hidden lg:inline-flex`}
+          >
+            <div>
+              <a href="#" className="text-white">
                 Home
               </a>
             </div>
-            <a href="#" className={scrolled ? "text-black" : "text-white"}>
+            <a href="#" className="text-white">
               About Us
             </a>
-            <a href="#" className={scrolled ? "text-black" : "text-white"}>
+            <a href="#" className="text-white">
               Services
             </a>
-            <a href="#" className={scrolled ? "text-black" : "text-white"}>
+            <a href="#" className="text-white ">
               Gallery
             </a>
-            <a href="#" className={scrolled ? "text-black" : "text-white"}>
+            <a href="#" className="text-white">
               Contact Us
             </a>
           </div>
@@ -164,9 +161,9 @@ const Navbar = () => {
           <div className="flex justify-center items-center gap-3">
             <i
               className={
-                scrolled
-                  ? "bx bx-moon text-black text-[20px] cursor-pointer"
-                  : "bx bx-moon text-white text-[20px] cursor-pointer"
+                // scrolled
+                //   ? "bx bx-moon text-white text-[20px] cursor-pointer"
+                "bx bx-moon text-white text-[20px] cursor-pointer"
               }
               ref={themeButton}
               onClick={handleButtonClick}
@@ -174,9 +171,9 @@ const Navbar = () => {
             <div className="lg:hidden">
               <i
                 className={
-                  scrolled
-                    ? "bx bx-grid-alt text-black text-[20px] cursor-pointer"
-                    : "bx bx-grid-alt text-white text-[20px] cursor-pointer"
+                  // scrolled
+                  //   ? "bx bx-grid-alt text-white text-[20px] cursor-pointer"
+                  "bx bx-grid-alt text-white text-[20px] cursor-pointer"
                 }
                 onClick={toggleMenu}
               ></i>
